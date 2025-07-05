@@ -20,20 +20,22 @@ body {
   background-color: #061227; /* Mörkblå ton */
   color: white;
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 60px 20px 60px;
   margin: 0;
 }
 
 .section-divider h2 {
   font-size: 2em;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .section-divider p {
   font-size: 1.1em;
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 0;
   opacity: 0.9;
+  margin-bottom: 30px;
 }
 
 /* Project Cards */
@@ -210,6 +212,7 @@ body {
   color: white;
   padding: 40px 20px;
   text-align: center;
+  padding: 20px 0;
 }
 
 .site-footer p {
@@ -235,18 +238,3 @@ body {
   transform: scale(1.2);
   fill: #9bb3d3;
 }
-
-@media (max-width: 600px) {
-  .section-divider {
-    padding: 40px 20px 20px; /* Mindre luft för mobil */
-  }
-
-  .projects-section {
-    padding: 20px 20px 40px;
-  }
-
-  .contact-section {
-    padding: 40px 20px 40px;
-  }
-}
-
