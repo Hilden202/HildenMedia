@@ -7,7 +7,7 @@ body {
 }
 
 .hero {
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 
 .logo {
@@ -20,7 +20,7 @@ body {
   background-color: #061227; /* Mörkblå ton */
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px 10px;
   margin: 0;
 }
 
@@ -40,14 +40,14 @@ body {
 
 .projects-section {
   background-color: #061227;
-  padding: 60px 20px;
+  padding: 40px 20px 10px;
   color: white;
   text-align: center;
 }
 
 .projects-section h2 {
   font-size: 2em;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .project-grid {
@@ -101,14 +101,14 @@ body {
 
 .contact-section {
   background-color: #061227;
-  padding: 60px 20px;
+  padding: 40px 20px 10px;
   color: white;
   text-align: center;
 }
 
 .contact-section h2 {
   font-size: 2em;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .contact-section form {
