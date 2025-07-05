@@ -7,7 +7,7 @@ body {
 }
 
 .hero {
-  margin-top: 7vh;
+  margin-top: 8vh;
 }
 
 .logo {
@@ -20,7 +20,7 @@ body {
   background-color: #061227; /* Mörkblå ton */
   color: white;
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 60px 20px 40px;
   margin: 0;
 }
 
@@ -40,7 +40,7 @@ body {
 
 .projects-section {
   background-color: #061227;
-  padding: 40px 20px 20px;
+  padding: 40px 20px 60px; 
   color: white;
   text-align: center;
 }
@@ -101,7 +101,7 @@ body {
 
 .contact-section {
   background-color: #061227;
-  padding: 40px 20px 20px;
+  padding: 60px 20px 60px;
   color: white;
   text-align: center;
 }
@@ -234,5 +234,19 @@ body {
 .social-icons a:hover svg {
   transform: scale(1.2);
   fill: #9bb3d3;
+}
+
+@media (max-width: 600px) {
+  .section-divider {
+    padding: 40px 20px 20px; /* Mindre luft för mobil */
+  }
+
+  .projects-section {
+    padding: 20px 20px 40px;
+  }
+
+  .contact-section {
+    padding: 40px 20px 40px;
+  }
 }
 
