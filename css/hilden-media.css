@@ -7,7 +7,13 @@ body {
 }
 
 .hero {
-  margin-top: 8vh;
+  min-height: 50vh;   /* ↓ kortare hero-sektion, justera till 40–60vh efter smak */
+  margin-top: 0 !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;  /* höj eller sänk px för loggans position */
 }
 
 .logo {

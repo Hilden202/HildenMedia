@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="preload" as="image" href="images/hero_bg.webp" fetchpriority="high">
-   <style>
-     html, body {
-       margin:0;
-       height:100%;
-       background: #0e2a6b url("images/hero_bg.webp") center / cover no-repeat;
-     }
-     .hero {
-       min-height: 70vh;
-     }
-   </style>
+  <!-- 🚀 Preload + inline paint av bakgrundsbilden -->
+  <link rel="preload" as="image" href="images/hero_bg.webp" fetchpriority="high">
+  <style>
+    /* Nollställ toppmellanrum helt */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      min-height: 100%;
+      background: #000 url("images/hero_bg.webp") center / cover no-repeat;
+    }
+    /* Förhindrar ev. margin-collapse från första sektionen */
+    .hero {
+      min-height: 70vh;
+      margin-top: 0 !important;
+    }
+  </style>
   <title>HildenMedia</title>
   <meta name="description" content="HildenMedia – Teknik med själ. Projektportfölj, kontakt och framtida .NET-appar.">
   <meta name="keywords" content="Patrik Hildenborg, .NET utvecklare, systemutvecklare, HildenMedia, portfolio, AI agent, CV">
@@ -130,7 +135,6 @@
 </div>
 </div>
 <script src="script/hilden-media.js"></script>
-</body>
 
 <footer class="site-footer">
   <p>&copy; HildenMedia 2025</p>
@@ -155,4 +159,5 @@
     </a>
   </div>
 </footer>
+</body>
 </html>
