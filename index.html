@@ -19,6 +19,7 @@
       margin-top: 0 !important;
     }
   </style>
+
   <title>HildenMedia</title>
   <meta name="description" content="HildenMedia – Teknik med själ. Projektportfölj, kontakt och framtida .NET-appar.">
   <meta name="keywords" content="Patrik Hildenborg, .NET utvecklare, systemutvecklare, HildenMedia, portfolio, AI agent, CV">
@@ -27,7 +28,7 @@
   <meta name="image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg">
   <meta itemprop="image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg">
 
-  <!-- Open Graph Metadata (för Facebook, LinkedIn m.fl.) -->
+  <!-- Open Graph Metadata -->
   <meta property="og:title" content="HildenMedia – Teknik med själ">
   <meta property="og:description" content="Utforska Patrik Hildenborgs projektportfölj och tekniska nav – .NET, AI och mer.">
   <meta property="og:image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg">
@@ -62,19 +63,16 @@
       "width": 1200,
       "height": 630
     },
-    "publisher": {
-      "@type": "Person",
-      "name": "Patrik Hildenborg"
-    }
+    "publisher": { "@type": "Person", "name": "Patrik Hildenborg" }
   }
   </script>
 </head>
 <body>
   <!-- Dold logotyp för SEO/indexering -->
-   <img src="images/hilden_media_logo_meta.jpg" alt="HildenMedia logotyp – .NET, AI och utveckling" style="position:absolute; left:-9999px;" width="600" height="auto">
-  <div class="hero">
-   <img src="images/hilden_media_logo_transparent.png" alt="" class="logo" fetchpriority="high" decoding="async" aria-hidden="true">
+  <img src="images/hilden_media_logo_meta.jpg" alt="HildenMedia logotyp – .NET, AI och utveckling" style="position:absolute; left:-9999px;" width="600" height="auto">
 
+  <div class="hero">
+    <img src="images/hilden_media_logo_transparent.png" alt="" class="logo" fetchpriority="high" decoding="async" aria-hidden="true">
   </div>
 
   <div class="section-divider">
@@ -83,81 +81,98 @@
   </div>
 
   <div class="projects-section">
-  <h2>Projekt</h2>
-  <div class="project-grid">
-<a href="https://sarasblogg.onrender.com" class="project-card" target="_blank" title="Besök SarasBlogg – bloggplattform med ASP.NET Core">
-  <div class="icon" aria-label="Ikon föreställande ett dokument – representerar en bloggplattform">
-    <!-- Dokument med textlinjer -->
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 2H6C4.9 2 4 2.9 4 4v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM13 9V3.5L18.5 9H13zM7 13h10v2H7v-2zm0 4h7v2H7v-2z"/>
-    </svg>
-  </div>
-  <h3>SarasBlogg</h3>
-  <p>En bloggplattform byggd med ASP.NET Core</p>
-</a>
-<a href="https://cv.hildenmedia.se" class="project-card" target="_blank">
-  <div class="icon" aria-label="CV-ikon med person och text – länkar till Patrik Hildenborgs digitala CV">
-    <!-- Person i ruta med text (CV) -->
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 4C2.9 4 2 4.9 2 6v12c0 1.1 0.9 2 2 2h16c1.1 0 2-0.9 2-2V6c0-1.1-0.9-2-2-2H4zm4 3c1.1 0 2 0.9 2 2s-0.9 2-2 2-2-0.9-2-2 0.9-2 2-2zm0 4c1.7 0 5 0.9 5 2.7V15H3v-1.3C3 11.9 6.3 11 8 11zm7 0h5v2h-5v-2zm0 3h5v2h-5v-2z"/>
-    </svg>
-  </div>
-  <h3>Mitt CV</h3>
-  <p>Mitt digitala CV online</p>
-</a>
-<a href="#" class="project-card">
-  <div class="icon" aria-label="Ikon som symboliserar en teknikförgrening – kommande .NET- och API-projekt">
-    <!-- API/verktyg ikon -->
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10.5 0L12 3l1.5-3h2l-2.5 5h2L18 0h2.5l-2.5 5H21v2h-6l-3 6 1.5 3-1.5 3H9l1.5-3L9 13h-6v-2h2.5L4 5H6l2.5 5h2L8 0h2.5z"/>
-    </svg>
-  </div>
-  <h3>Kommande</h3>
-  <p>Kommande projekt i .NET och API-tjänster</p>
-</a>
-  </div>
-</div>
+    <h2>Projekt</h2>
+    <div class="project-grid">
+      <a href="https://sarasblogg.onrender.com" class="project-card" target="_blank" title="Besök SarasBlogg – bloggplattform med ASP.NET Core">
+        <div class="icon" aria-label="Ikon föreställande ett dokument – representerar en bloggplattform">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6C4.9 2 4 2.9 4 4v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM13 9V3.5L18.5 9H13zM7 13h10v2H7v-2zm0 4h7v2H7v-2z"/>
+          </svg>
+        </div>
+        <h3>SarasBlogg</h3>
+        <p>En bloggplattform byggd med ASP.NET Core</p>
+      </a>
 
-<div class="contact-section">
-  <h2>Kontakt</h2>
-  <form action="https://formspree.io/f/mjkrdraz" method="POST">
-    <input type="text" name="name" placeholder="Ditt namn" required>
-    <input type="email" name="email" placeholder="Din e-post" required>
-    <textarea name="message" placeholder="Ditt meddelande" required></textarea>
-    <button onclick="openModal()" class="contact-button" type="submit">Skicka</button>
-</form>
-  <div id="thankYouModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Tack för ditt meddelande!</h2>
-    <p>Jag återkommer så snart jag kan.</p>
-  </div>
-</div>
-</div>
-<script src="script/hilden-media.js"></script>
+      <a href="https://cv.hildenmedia.se" class="project-card" target="_blank">
+        <div class="icon" aria-label="CV-ikon med person och text – länkar till Patrik Hildenborgs digitala CV">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4C2.9 4 2 4.9 2 6v12c0 1.1 0.9 2 2 2h16c1.1 0 2-0.9 2-2V6c0-1.1-0.9-2-2-2H4zm4 3c1.1 0 2 0.9 2 2s-0.9 2-2 2-2-0.9-2-2 0.9-2 2-2zm0 4c1.7 0 5 0.9 5 2.7V15H3v-1.3C3 11.9 6.3 11 8 11zm7 0h5v2h-5v-2zm0 3h5v2h-5v-2z"/>
+          </svg>
+        </div>
+        <h3>Mitt CV</h3>
+        <p>Mitt digitala CV online</p>
+      </a>
 
-<footer class="site-footer">
-  <p>&copy; HildenMedia 2025</p>
-  <div class="social-icons">
-    <a href="https://github.com/hilden202" target="_blank" aria-label="Besök Patrik Hildenborgs GitHub-profil">
-      <!-- GitHub SVG -->
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 0.5C5.37 0.5 0 5.87 0 12.5C0 17.6 3.438 21.975 8.205 23.5C8.805 23.6 9.025 23.275 9.025 23V20.9C5.672 21.6 4.968 19.4 4.968 19.4C4.437 18 3.672 17.6 3.672 17.6C2.547 16.8 3.75 16.8 3.75 16.8C4.984 16.9 5.625 18.1 5.625 18.1C6.75 20 8.437 19.4 9.172 19.1C9.282 18.4 9.562 17.9 9.875 17.6C7.2 17.3 4.375 16.2 4.375 11.6C4.375 10.3 4.844 9.2 5.625 8.3C5.5 8 5.078 6.75 5.75 5.1C5.75 5.1 6.797 4.8 9.022 6.3C9.984 6.05 11.016 5.9 12.047 5.9C13.078 5.9 14.109 6.05 15.072 6.3C17.297 4.8 18.344 5.1 18.344 5.1C19.016 6.75 18.594 8 18.469 8.3C19.25 9.2 19.719 10.3 19.719 11.6C19.719 16.2 16.891 17.3 14.219 17.6C14.625 18 14.969 18.8 14.969 20V23C14.969 23.275 15.188 23.6 15.797 23.5C20.563 21.975 24 17.6 24 12.5C24 5.87 18.63 0.5 12 0.5Z"/>
-      </svg>
-    </a>
-    <a href="https://linkedin.com/in/patrik-hildenborg" target="_blank" aria-label="Besök Patrik Hildenborgs LinkedIn-profil">
-      <!-- LinkedIn SVG -->
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.983 3.5C4.983 4.60457 4.08757 5.5 2.983 5.5C1.87843 5.5 0.983002 4.60457 0.983002 3.5C0.983002 2.39543 1.87843 1.5 2.983 1.5C4.08757 1.5 4.983 2.39543 4.983 3.5ZM0.983002 22.5H4.983V7.5H0.983002V22.5ZM7.983 22.5H11.983V15.5C11.983 13.29 13.983 13.5 14.983 13.5C16.203 13.5 16.983 14.41 16.983 16.5V22.5H20.983V15C20.983 11.45 18.983 10.5 17.483 10.5C15.983 10.5 14.983 11.5 14.483 12.5H14.483V7.5H10.983C11.033 8.64 10.983 22.5 10.983 22.5H7.983Z"/>
-      </svg>
-    </a>
-    <a href="mailto:phildenborg@gmail.com" aria-label="Skicka e-post till Patrik Hildenborg">
-      <!-- Mail SVG -->
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 4C0.89543 4 0 4.89543 0 6V18C0 19.1046 0.89543 20 2 20H22C23.1046 20 24 19.1046 24 18V6C24 4.89543 23.1046 4 22 4H2ZM22 6V6.511L12 13.511L2 6.511V6H22ZM2 18V8.489L12 15.489L22 8.489L22.002 18H2Z"/>
-      </svg>
-    </a>
+      <a href="#" class="project-card" id="upcomingCard" role="button" aria-controls="upcomingModal" onclick="openUpcoming(event)">
+        <div class="icon" aria-label="Ikon som symboliserar en teknikförgrening – kommande .NET- och API-projekt">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.5 0L12 3l1.5-3h2l-2.5 5h2L18 0h2.5l-2.5 5H21v2h-6l-3 6 1.5 3-1.5 3H9l1.5-3L9 13h-6v-2h2.5L4 5H6l2.5 5h2L8 0h2.5z"/>
+          </svg>
+        </div>
+        <h3>Kommande</h3>
+        <p>Kommande projekt i .NET och API-tjänster</p>
+      </a>
+    </div>
   </div>
-</footer>
+
+  <!-- Kontakt -->
+  <div class="contact-section">
+    <h2>Kontakt</h2>
+    <form action="https://formspree.io/f/mjkrdraz" method="POST">
+      <input type="text" name="name" placeholder="Ditt namn" required>
+      <input type="email" name="email" placeholder="Din e-post" required>
+      <textarea name="message" placeholder="Ditt meddelande" required></textarea>
+      <button id="contactSubmit" class="contact-button" type="submit">Skicka</button>
+    </form>
+
+    <!-- Tack-modal -->
+    <div id="thankYouModal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Tack för ditt meddelande!</h2>
+        <p>Jag återkommer så snart jag kan.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✨ Modal för kommande Tarotkort-projekt -->
+  <div id="upcomingModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" onclick="closeUpcoming()">&times;</span>
+      <h2>Tarotkort – Kommande</h2>
+      <div class="tarot-hero" role="img" aria-label="Förhandsvisning av tarotkort"></div>
+      <p><strong>Upp till 3 kort per dag</strong> kopplat till en egen frågeställning – välj 1, 2 eller 3 kort i samma dragning.</p>
+      <ul class="tarot-features">
+        <li>Inloggning krävs (minst <em>User</em>).</li>
+        <li>AI granskar frågan mot regelverk innan dragning.</li>
+        <li>Historik per användare (dagens dragning).</li>
+        <li>Planerar stöd för fler dagliga dragningar framöver.</li>
+      </ul>
+      <p class="tarot-note">Lanseras först i SarasBlogg – fler möjligheter kan komma längre fram.</p>
+    </div>
+  </div>
+
+  <script src="script/hilden-media.js"></script>
+
+  <footer class="site-footer">
+    <p>&copy; HildenMedia 2025</p>
+    <div class="social-icons">
+      <a href="https://github.com/hilden202" target="_blank" aria-label="Besök Patrik Hildenborgs GitHub-profil">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0.5C5.37 0.5 0 5.87 0 12.5C0 17.6 3.438 21.975 8.205 23.5C8.805 23.6 9.025 23.275 9.025 23V20.9C5.672 21.6 4.968 19.4 4.968 19.4C4.437 18 3.672 17.6 3.672 17.6C2.547 16.8 3.75 16.8 3.75 16.8C4.984 16.9 5.625 18.1 5.625 18.1C6.75 20 8.437 19.4 9.172 19.1C9.282 18.4 9.562 17.9 9.875 17.6C7.2 17.3 4.375 16.2 4.375 11.6C4.375 10.3 4.844 9.2 5.625 8.3C5.5 8 5.078 6.75 5.75 5.1C5.75 5.1 6.797 4.8 9.022 6.3C9.984 6.05 11.016 5.9 12.047 5.9C13.078 5.9 14.109 6.05 15.072 6.3C17.297 4.8 18.344 5.1 18.344 5.1C19.016 6.75 18.594 8 18.469 8.3C19.25 9.2 19.719 10.3 19.719 11.6C19.719 16.2 16.891 17.3 14.219 17.6C14.625 18 14.969 18.8 14.969 20V23C14.969 23.275 15.188 23.6 15.797 23.5C20.563 21.975 24 17.6 24 12.5C24 5.87 18.63 0.5 12 0.5Z"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/patrik-hildenborg" target="_blank" aria-label="Besök Patrik Hildenborgs LinkedIn-profil">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.983 3.5C4.983 4.60457 4.08757 5.5 2.983 5.5C1.87843 5.5 0.983002 4.60457 0.983002 3.5C0.983002 2.39543 1.87843 1.5 2.983 1.5C4.08757 1.5 4.983 2.39543 4.983 3.5ZM0.983002 22.5H4.983V7.5H0.983002V22.5ZM7.983 22.5H11.983V15.5C11.983 13.29 13.983 13.5 14.983 13.5C16.203 13.5 16.983 14.41 16.983 16.5V22.5H20.983V15C20.983 11.45 18.983 10.5 17.483 10.5C15.983 10.5 14.983 11.5 14.483 12.5H14.483V7.5H10.983C11.033 8.64 10.983 22.5 10.983 22.5H7.983Z"/>
+        </svg>
+      </a>
+      <a href="mailto:phildenborg@gmail.com" aria-label="Skicka e-post till Patrik Hildenborg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 4C0.89543 4 0 4.89543 0 6V18C0 19.1046 0.89543 20 2 20H22C23.1046 20 24 19.1046 24 18V6C24 4.89543 23.1046 4 22 4H2ZM22 6V6.511L12 13.511L2 6.511V6H22ZM2 18V8.489L12 15.489L22 8.489L22.002 18H2Z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
 </body>
 </html>

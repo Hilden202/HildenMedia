@@ -1,5 +1,6 @@
-  const form = document.querySelector(".contact-section form");
-
+// Hantering av kontaktformulärets modal
+const form = document.querySelector(".contact-section form");
+if (form) {
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
@@ -7,9 +8,7 @@
     const response = await fetch(form.action, {
       method: form.method,
       body: data,
-      headers: {
-        'Accept': 'application/json'
-      }
+      headers: { 'Accept': 'application/json' }
     });
 
     if (response.ok) {
@@ -19,18 +18,49 @@
       alert("Ett fel uppstod. Försök igen senare.");
     }
   });
+}
 
-  function openModal() {
-    document.getElementById("thankYouModal").style.display = "block";
-  }
+// === ThankYou modal ===
+function openModal() {
+  const modal = document.getElementById("thankYouModal");
+  if (!modal) return;
+  modal.classList.add("show");
+  modal.setAttribute("aria-hidden", "false");
+}
+function closeModal() {
+  const modal = document.getElementById("thankYouModal");
+  if (!modal) return;
+  modal.classList.remove("show");
+  modal.setAttribute("aria-hidden", "true");
+}
 
-  function closeModal() {
-    document.getElementById("thankYouModal").style.display = "none";
-  }
+// === Upcoming modal ===
+function openUpcoming(e) {
+  if (e) e.preventDefault();
+  const modal = document.getElementById("upcomingModal");
+  if (!modal) return;
+  modal.classList.add("show");
+  modal.setAttribute('aria-hidden', 'false');
+}
+function closeUpcoming() {
+  const modal = document.getElementById('upcomingModal');
+  if (!modal) return;
+  modal.classList.remove("show");
+  modal.setAttribute('aria-hidden', 'true');
+}
 
-  window.onclick = function(event) {
-    const modal = document.getElementById("thankYouModal");
-    if (event.target === modal) {
-      closeModal();
-    }
+// === Global stängning via overlay eller ESC ===
+window.addEventListener("click", (e) => {
+  const thankModal = document.getElementById("thankYouModal");
+  const upModal = document.getElementById("upcomingModal");
+
+  if (thankModal && e.target === thankModal) closeModal();
+  if (upModal && e.target === upModal) closeUpcoming();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+    closeUpcoming();
   }
+});
