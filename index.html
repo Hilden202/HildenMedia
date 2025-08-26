@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 🚀 Preload + inline paint av hero-bakgrundsbilden -->
+  <!-- Byt SÖKVÄG nedan till din riktiga bakgrundsbild -->
+  <link rel="preload" as="image" href="images/hero_bg.webp" fetchpriority="high">
+  <style>
+  /* Målar omedelbart bakgrunden utan att vänta på extern CSS */
+  .hero{
+  min-height: 70vh;
+  background: center / cover no-repeat url("images/hero_bg.webp");
+  }
+  /* Fallback ifall hero inte täcker hela viewporten vid first paint */
+  html, body { background: #000; } /* valfri neutral, syns bak OM hero är kort */
+  </style>
   <title>HildenMedia</title>
   <meta name="description" content="HildenMedia – Teknik med själ. Projektportfölj, kontakt och framtida .NET-appar.">
   <meta name="keywords" content="Patrik Hildenborg, .NET utvecklare, systemutvecklare, HildenMedia, portfolio, AI agent, CV">
@@ -57,7 +69,7 @@
   <!-- Dold logotyp för SEO/indexering -->
    <img src="images/hilden_media_logo_meta.jpg" alt="HildenMedia logotyp – .NET, AI och utveckling" style="position:absolute; left:-9999px;" width="600" height="auto">
   <div class="hero">
-   <img src="images/hilden_media_logo_transparent.png" alt="" class="logo" loading="lazy" aria-hidden="true">
+   <img src="images/hilden_media_logo_transparent.png" alt="" class="logo" fetchpriority="high" decoding="async" aria-hidden="true">
 
   </div>
 
