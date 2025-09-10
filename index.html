@@ -3,43 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- 🚀 Preload + inline paint av bakgrundsbilden -->
   <link rel="preload" as="image" href="images/hero_bg.webp" fetchpriority="high">
   <style>
-    /* Nollställ toppmellanrum helt */
     html, body {
       margin: 0 !important;
       padding: 0 !important;
       min-height: 100%;
       background: #000 url("images/hero_bg.webp") center / cover no-repeat;
     }
-    /* Förhindrar ev. margin-collapse från första sektionen */
-    .hero {
-      min-height: 70vh;
-      margin-top: 0 !important;
-    }
+    .hero { min-height: 70vh; margin-top: 0 !important; }
   </style>
 
   <title>HildenMedia</title>
+
+  <!-- Canonical + robots (tillåt stor bild i SERP) -->
+  <link rel="canonical" href="https://hildenmedia.se/">
+  <meta name="robots" content="max-image-preview:large">
+
   <meta name="description" content="HildenMedia – Teknik med själ. Projektportfölj, kontakt och framtida .NET-appar.">
   <meta name="keywords" content="Patrik Hildenborg, .NET utvecklare, systemutvecklare, HildenMedia, portfolio, AI agent, CV">
 
-  <!-- 🔗 Förstärkt bildmetadata för SEO -->
-  <meta name="image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg">
-  <meta itemprop="image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg">
+  <!-- 🔗 Förstärkt bildmetadata för SEO (versionerad URL för att bryta cache) -->
+  <meta name="image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2">
+  <meta itemprop="image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2">
 
-  <!-- Open Graph Metadata -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hildenmedia.se/">
   <meta property="og:title" content="HildenMedia – Teknik med själ">
   <meta property="og:description" content="Utforska Patrik Hildenborgs projektportfölj och tekniska nav – .NET, AI och mer.">
-  <meta property="og:image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg">
-  <meta property="og:url" content="https://hildenmedia.se">
-  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2">
 
-  <!-- Twitter Card Metadata -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HildenMedia – Teknik med själ">
   <meta name="twitter:description" content="Utforska Patrik Hildenborgs projektportfölj och tekniska nav – .NET, AI och mer.">
-  <meta name="twitter:image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg">
+  <meta name="twitter:image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2">
 
   <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="images/favicon_hildenmedia.png">
@@ -48,28 +49,46 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/hilden-media.css">
 
-  <!-- ✅ Schema.org JSON-LD metadata -->
+  <!-- ✅ Schema.org JSON-LD: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "HildenMedia",
-    "url": "https://hildenmedia.se",
+    "url": "https://hildenmedia.se/",
     "description": "HildenMedia – Teknik med själ. Projektportfölj, kontakt och framtida .NET-appar.",
-    "thumbnailUrl": "https://hildenmedia.se/images/hilden_media_logo_meta.jpg",
+    "thumbnailUrl": "https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2",
     "image": {
       "@type": "ImageObject",
-      "url": "https://hildenmedia.se/images/hilden_media_logo_meta.jpg",
+      "url": "https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2",
       "width": 1200,
       "height": 630
     },
     "publisher": { "@type": "Person", "name": "Patrik Hildenborg" }
   }
   </script>
+
+  <!-- (Frivilligt men bra) Schema.org: Organization med logo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HildenMedia",
+    "url": "https://hildenmedia.se/",
+    "logo": "https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2",
+    "sameAs": [
+      "https://github.com/hilden202",
+      "https://linkedin.com/in/patrik-hildenborg"
+    ]
+  }
+  </script>
 </head>
+
 <body>
-  <!-- Dold logotyp för SEO/indexering -->
-  <img src="images/hilden_media_logo_meta.jpg" alt="HildenMedia logotyp – .NET, AI och utveckling" style="position:absolute; left:-9999px;" width="600" height="auto">
+<!-- Dold logotyp för SEO/indexering -->
+<img src="images/hilden_media_logo_meta.jpg?v=2"
+     alt="HildenMedia logotyp – .NET, AI och utveckling"
+     style="position:absolute; left:-9999px;" width="600" height="auto">
 
   <div class="hero">
     <img src="images/hilden_media_logo_transparent.png" alt="" class="logo" fetchpriority="high" decoding="async" aria-hidden="true">
