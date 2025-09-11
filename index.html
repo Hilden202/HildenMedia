@@ -35,6 +35,10 @@
   <meta property="og:title" content="HildenMedia – Teknik med själ">
   <meta property="og:description" content="Utforska Patrik Hildenborgs projektportfölj och tekniska nav – .NET, AI och mer.">
   <meta property="og:image" content="https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2">
+  <meta property="og:site_name" content="HildenMedia">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HildenMedia – teknik med själ">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -50,38 +54,48 @@
   <link rel="stylesheet" href="css/hilden-media.css">
 
   <!-- ✅ Schema.org JSON-LD: WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "HildenMedia",
-    "url": "https://hildenmedia.se/",
-    "description": "HildenMedia – Teknik med själ. Projektportfölj, kontakt och framtida .NET-appar.",
-    "thumbnailUrl": "https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2",
-    "image": {
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://hildenmedia.se/#org",
+      "name": "HildenMedia",
+      "url": "https://hildenmedia.se/",
+      "logo": { "@id": "https://hildenmedia.se/#hero-image" },
+      "sameAs": [
+        "https://github.com/hilden202",
+        "https://linkedin.com/in/patrik-hildenborg"
+      ]
+    },
+    {
       "@type": "ImageObject",
+      "@id": "https://hildenmedia.se/#hero-image",
       "url": "https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2",
       "width": 1200,
-      "height": 630
+      "height": 630,
+      "caption": "HildenMedia – teknik med själ"
     },
-    "publisher": { "@type": "Person", "name": "Patrik Hildenborg" }
-  }
-  </script>
+    {
+      "@type": "WebSite",
+      "@id": "https://hildenmedia.se/#website",
+      "url": "https://hildenmedia.se/",
+      "name": "HildenMedia",
+      "publisher": { "@id": "https://hildenmedia.se/#org" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hildenmedia.se/#webpage",
+      "url": "https://hildenmedia.se/",
+      "name": "HildenMedia",
+      "isPartOf": { "@id": "https://hildenmedia.se/#website" },
+      "primaryImageOfPage": { "@id": "https://hildenmedia.se/#hero-image" }
+    }
+  ]
+}
+</script>
 
-  <!-- (Frivilligt men bra) Schema.org: Organization med logo -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "HildenMedia",
-    "url": "https://hildenmedia.se/",
-    "logo": "https://hildenmedia.se/images/hilden_media_logo_meta.jpg?v=2",
-    "sameAs": [
-      "https://github.com/hilden202",
-      "https://linkedin.com/in/patrik-hildenborg"
-    ]
-  }
-  </script>
 </head>
 
 <body>

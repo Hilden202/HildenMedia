@@ -1,0 +1,8 @@
+User-agent: *
+Disallow:
+
+# Blocka den transparenta loggan i Bildsök
+User-agent: *
+Disallow: /images/hilden_media_logo_transparent.png
+
+Sitemap: https://hildenmedia.se/sitemap.xml
