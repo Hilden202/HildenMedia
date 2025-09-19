@@ -294,7 +294,8 @@ body {
   max-width: 560px;            /* tidigare 400px – passar hero bättre */
 }
 
-.modal-content::before{
+/* Visa tarot-bakgrund endast på "Kommande"-modallen */
+#upcomingModal .modal-content::before{
   content:"";
   position:absolute; inset:0;
   background: center / cover no-repeat url("../images/tarot_teaser.png");
@@ -302,6 +303,11 @@ body {
   border-radius: 8px;
   pointer-events: none;
 }
+
+ /* Säkerställ att tack-modalen inte får någon overlay-bakgrund */
+ #thankYouModal .modal-content::before{
+   content: none;
+ }
 
 /* Valfritt: snyggare lista i modalen */
 .tarot-features{
