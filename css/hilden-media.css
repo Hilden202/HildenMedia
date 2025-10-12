@@ -84,7 +84,11 @@ body {
   gap: 12px;
   box-shadow: 0 0 0 transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 320px;
 }
+
+.project-card p { margin-bottom: 0; }
+
 
 .project-card:hover {
   transform: translateY(-6px);
@@ -319,3 +323,58 @@ body {
   margin-top: 12px;
   opacity: .85;
 }
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;          /* tryck nedåt */
+  padding-top: 8px;          /* lite men inte för mycket luft ovanför knapparna */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Normalisera höjd och räta upp ikoner/text */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:8px 12px;
+  min-height:36px;         /* samma höjd */
+  line-height:1;           /* undvik radbas-skillnader */
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+  background:#15305e;
+  border:1px solid #1f365a;
+  color:#fff;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  white-space:nowrap;      /* hindra radbrytning som ”drar ut” höjden */
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(0,0,0,.35);
+  background:#1c3b72;
+}
+.btn-ghost{
+  background:transparent;
+  border:1px solid #1f365a;
+}
+.btn-ghost:hover{
+  background:#0b1e3f;
+}
+
+/* Ikonfix så att SVG inte påverkar radavståndet */
+.btn svg, .btn .gh{
+  width:18px;
+  height:18px;
+  display:block;
+  fill:#9bb3d3;
+}
+.btn:hover .gh{ fill:#c9d7ee; }
+
+.more-repos{ margin-top:20px; }
+.more-repos summary{ cursor:pointer; font-weight:600; }
+.more-repos ul{ list-style:none; padding-left:0; }
+.more-repos li{ margin:6px 0; opacity:.9; }

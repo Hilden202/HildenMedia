@@ -113,50 +113,85 @@
     <p>Jag heter Patrik Hildenborg, jag är en utvecklare med fokus på att skapa moderna och intuitiva lösningar.</p>
   </div>
 
-  <div class="projects-section">
-    <h2>Projekt</h2>
-    <div class="project-grid">
-    <a href="https://medhjärtatsomkompass.se"
-       class="project-card"
-       target="_blank" rel="noopener noreferrer"
-       title="Besök med Hjärtat som Kompass – Saras blogg på egen domän"
-       aria-label="Öppna med Hjärtat som Kompass i ny flik (Saras blogg)">
-      <div class="icon" aria-label="Ikon för bloggplattform – med Hjärtat som Kompass">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-                2 6 4 4 6.5 4c1.74 0 3.41 1.01 4.22 2.44h.56
-                C13.09 5.01 14.76 4 16.5 4
-                19 4 21 6 21 8.5
-                c0 3.78-3.4 6.86-8.55 11.54
-                L12 21.35z"/>
-      </svg>
-      </div>
-      <h3>med Hjärtat som Kompass <small style="opacity:.8;">(Saras blogg)</small></h3>
-      <p>Saras blogg – ASP.NET Core frontend + fristående API.</p>
-    </a>   
-      <a href="https://kostplaneraren.se" class="project-card" target="_blank" rel="noopener noreferrer"
-         title="Besök Kostplaneraren – Planera måltider med näringsdata från Livsmedelsverket">
-        <div class="icon" aria-label="Ikon som representerar mat & näring – länkar till Kostplaneraren">
-          <!-- enkel ”sked/gaffel”-ikon (inline SVG, ingen extern dependency) -->
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M5 2c-.55 0-1 .45-1 1v5a3 3 0 0 0 2 2.83V22a1 1 0 1 0 2 0V10.83A3 3 0 0 0 10 8V3c0-.55-.45-1-1-1s-1 .45-1 1v4H8V3c0-.55-.45-1-1-1s-1 .45-1 1v4H6V3c0-.55-.45-1-1-1Zm10.5 0A2.5 2.5 0 0 0 13 4.5V22a1 1 0 1 0 2 0v-6h2v6a1 1 0 1 0 2 0V4.5A2.5 2.5 0 0 0 15.5 2Z"/>
-          </svg>
-        </div>
-        <h3>Kostplaneraren</h3>
-        <p>Planera måltider med näringsdata – data från Livsmedelsverket.</p>
-      </a>
+<!-- PROJEKT -->
+<div class="projects-section">
+  <h2>Projekt</h2>
+  <div class="project-grid">
 
-      <a href="#" class="project-card" id="upcomingCard" role="button" aria-controls="upcomingModal" onclick="openUpcoming(event)">
-        <div class="icon" aria-label="Ikon som symboliserar en teknikförgrening – kommande .NET- och API-projekt">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10.5 0L12 3l1.5-3h2l-2.5 5h2L18 0h2.5l-2.5 5H21v2h-6l-3 6 1.5 3-1.5 3H9l1.5-3L9 13h-6v-2h2.5L4 5H6l2.5 5h2L8 0h2.5z"/>
-          </svg>
-        </div>
-        <h3>Kommande</h3>
-        <p>Kommande projekt i .NET och API-tjänster</p>
-      </a>
-    </div>
+    <!-- SarasBlogg + API i samma kort -->
+    <article class="project-card" aria-labelledby="proj-sarasblogg-title">
+      <div class="icon" aria-label="Ikon för bloggplattform – med Hjärtat som Kompass">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 4 4 6.5 4c1.74 0 3.41 1.01 4.22 2.44h.56C13.09 5.01 14.76 4 16.5 4 19 4 21 6 21 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </div>
+      <h3 id="proj-sarasblogg-title">med Hjärtat som Kompass <small style="opacity:.8;">(SarasBlogg)</small></h3>
+      <p>Saras blogg – ASP.NET Core frontend + fristående API.</p>
+      <div class="card-actions" role="group" aria-label="Länkar till SarasBlogg">
+        <!-- Viktigt: korrekt domän utan å/ä -->
+        <a class="btn" href="https://xn--medhjrtatsomkompass-kwb.se/" target="_blank" rel="noopener">
+  Öppna
+</a>
+        <a class="btn btn-ghost" href="https://github.com/Hilden202/SarasBlogg" target="_blank" rel="noopener" aria-label="Visa frontend-repo på GitHub">
+          <svg class="gh" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.1 3.44 9.48 8.21 11v-2.6c-1.3.29-2.65-.16-3.48-1.16-.75-.88-.9-2.09-.38-3.11.13-.26.03-.58-.23-.73-1.18-.69-1.62-2.22-.98-3.47.54-1.07 1.73-1.75 2.95-1.68.3.02.56-.19.6-.49.27-2.02 1.98-3.58 4.03-3.58s3.76 1.56 4.03 3.58c.04.3.3.5.6.49 1.22-.07 2.41.61 2.95 1.68.64 1.25.2 2.78-.98 3.47-.26.16-.36.47-.23.73.52 1.02.37 2.23-.38 3.11-.83 1-2.18 1.45-3.48 1.16V23.5C20.56 21.98 24 17.6 24 12.5 24 5.87 18.63.5 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/Hilden202/SarasBloggAPI" target="_blank" rel="noopener" aria-label="Visa API-repo på GitHub">
+          API
+        </a>
+      </div>
+    </article>
+
+    <!-- Kostplaneraren -->
+    <article class="project-card" aria-labelledby="proj-kost-title">
+      <div class="icon" aria-label="Ikon för mat & näring">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M5 2c-.55 0-1 .45-1 1v5a3 3 0 0 0 2 2.83V22a1 1 0 1 0 2 0V10.83A3 3 0 0 0 10 8V3c0-.55-.45-1-1-1s-1 .45-1 1v4H8V3c0-.55-.45-1-1-1s-1 .45-1 1v4H6V3c0-.55-.45-1-1-1Zm10.5 0A2.5 2.5 0 0 0 13 4.5V22a1 1 0 1 0 2 0v-6h2v6a1 1 0 1 0 2 0V4.5A2.5 2.5 0 0 0 15.5 2Z"/>
+        </svg>
+      </div>
+      <h3 id="proj-kost-title">Kostplaneraren</h3>
+      <p>Planera måltider – data från Livsmedelsverket.</p>
+      <div class="card-actions" role="group" aria-label="Länkar till Kostplaneraren">
+        <a class="btn" href="https://kostplaneraren.se" target="_blank" rel="noopener">Öppna</a>
+       <a class="btn btn-ghost" href="https://github.com/Hilden202/Matplaneraren" target="_blank" rel="noopener">
+  <svg class="gh" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.1 3.44 9.48 8.21 11v-2.6c-1.3.29-2.65-.16-3.48-1.16-.75-.88-.9-2.09-.38-3.11.13-.26.03-.58-.23-.73-1.18-.69-1.62-2.22-.98-3.47.54-1.07 1.73-1.75 2.95-1.68.3.02.56-.19.6-.49.27-2.02 1.98-3.58 4.03-3.58s3.76 1.56 4.03 3.58c.04.3.3.5.6.49 1.22-.07 2.41.61 2.95 1.68.64 1.25.2 2.78-.98 3.47-.26.16-.36.47-.23.73.52 1.02.37 2.23-.38 3.11-.83 1-2.18 1.45-3.48 1.16V23.5C20.56 21.98 24 17.6 24 12.5 24 5.87 18.63.5 12 .5z"/>
+  </svg>
+  GitHub
+</a>
+      </div>
+    </article>
+
+    <!-- HildenMedia (denna sida) -->
+    <article class="project-card" aria-labelledby="proj-hm-title">
+      <div class="icon" aria-label="HildenMedia ikon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 4h16v2H4zm0 6h16v2H4zm0 6h16v2H4z"/>
+        </svg>
+      </div>
+      <h3 id="proj-hm-title">HildenMedia</h3>
+      <p>Den här sidan – HTML/CSS på GitHub Pages.</p>
+      <div class="card-actions" role="group" aria-label="Länkar till HildenMedia">
+       <a class="btn btn-ghost" href="https://github.com/Hilden202/HildenMedia" target="_blank" rel="noopener">
+  <svg class="gh" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.1 3.44 9.48 8.21 11v-2.6c-1.3.29-2.65-.16-3.48-1.16-.75-.88-.9-2.09-.38-3.11.13-.26.03-.58-.23-.73-1.18-.69-1.62-2.22-.98-3.47.54-1.07 1.73-1.75 2.95-1.68.3.02.56-.19.6-.49.27-2.02 1.98-3.58 4.03-3.58s3.76 1.56 4.03 3.58c.04.3.3.5.6.49 1.22-.07 2.41.61 2.95 1.68.64 1.25.2 2.78-.98 3.47-.26.16-.36.47-.23.73.52 1.02.37 2.23-.38 3.11-.83 1-2.18 1.45-3.48 1.16V23.5C20.56 21.98 24 17.6 24 12.5 24 5.87 18.63.5 12 .5z"/>
+  </svg>
+  GitHub
+</a>
+
+      </div>
+    </article>
+
   </div>
+
+  <!-- Sekundärt: fler repo -->
+  <details class="more-repos">
+    <summary>Fler repo</summary>
+    <ul>
+      <li><a href="https://github.com/Hilden202/sarasblogg-media" target="_blank" rel="noopener">sarasblogg-media</a> – bilder/asset-stöd</li>
+    </ul>
+  </details>
+</div>
 
   <!-- Kontakt -->
   <div class="contact-section">
