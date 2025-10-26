@@ -64,3 +64,20 @@ document.addEventListener("keydown", (e) => {
     closeUpcoming();
   }
 });
+
+// === About text toggle ===
+(function () {
+  const text = document.getElementById('aboutText');
+  const btn  = document.getElementById('aboutToggle');
+
+  if (!text || !btn) return;
+
+  const labels = { more: 'Läs mer …', less: 'Visa mindre' };
+
+  btn.addEventListener('click', () => {
+    const expanded = text.classList.toggle('expanded');
+    text.setAttribute('aria-expanded', expanded);
+    btn.setAttribute('aria-expanded', expanded);
+    btn.textContent = expanded ? labels.less : labels.more;
+  });
+})();

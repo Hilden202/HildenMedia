@@ -6,6 +6,86 @@ body {
   text-align: center;
 }
 
+:root {
+  --lines: 4;
+}
+
+#about {
+  background-color: #061227;
+  color: white;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+#about h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+#about .about-text {
+  max-width: 65ch;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+#about .about-text p {
+  margin: 0 0 1.2rem;
+}
+
+#about .about-text blockquote {
+  margin: 0 0 1.6rem;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(255, 255, 255, 0.35);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#about .about-text a {
+  color: #9bb3d3;
+  text-decoration: underline;
+}
+
+.about-text {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--lines);
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
+  mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
+.about-text.expanded {
+  -webkit-line-clamp: unset;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.read-more {
+  margin-top: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .25);
+  color: inherit;
+  padding: .5rem .9rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+#about .read-more {
+  align-self: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-text {
+    transition: none;
+  }
+}
+
 .hero {
   min-height: 50vh;   /* ↓ kortare hero-sektion, justera till 40–60vh efter smak */
   margin-top: 0 !important;
@@ -378,3 +458,14 @@ body {
 .more-repos summary{ cursor:pointer; font-weight:600; }
 .more-repos ul{ list-style:none; padding-left:0; }
 .more-repos li{ margin:6px 0; opacity:.9; }
+
+/* Läs mer-knapp under about-text */
+.read-more{
+  margin-top:.9rem; padding:.55rem 1rem;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:.6rem; background:transparent; color:inherit;
+}
+.read-more:hover{ border-color:rgba(255,255,255,.45); transform:translateY(-1px); }
+.read-more:focus-visible{
+  outline:3px solid rgba(99,179,237,.6); outline-offset:3px;
+}
