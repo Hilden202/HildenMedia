@@ -154,7 +154,7 @@ body {
 .project-card {
   background-color: #0b1e3f;
   padding: 30px 20px;
-  width: 260px;
+  width: 285px;
   border-radius: 12px;
   text-decoration: none;
   color: white;
@@ -424,7 +424,7 @@ body {
   min-height:36px;         /* samma höjd */
   line-height:1;           /* undvik radbas-skillnader */
   border-radius:8px;
-  font-weight:600;
+  font-weight:800;
   text-decoration:none;
   background:#15305e;
   border:1px solid #1f365a;
