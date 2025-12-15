@@ -1,9 +1,11 @@
 <!-- HildenMedia Logo -->
 <div align="center">
   <a href="https://hildenmedia.se" target="_blank">
-    <img height="180"
-         src="https://raw.githubusercontent.com/Hilden202/HildenMedia/main/images/hilden_media_logo_meta.jpg"
-         alt="Hilden Media – Teknik med själ" />
+    <img
+      height="220"
+      src="https://raw.githubusercontent.com/Hilden202/HildenMedia/main/images/hilden_media_logo_meta.jpg"
+      alt="Hilden Media – Teknik med själ"
+    />
   </a>
 </div>
 
