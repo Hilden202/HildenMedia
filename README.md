@@ -1,11 +1,10 @@
 <!-- HildenMedia Logo -->
 <div align="center">
   <a href="https://hildenmedia.se" target="_blank">
-    <img height="200" src="https://raw.githubusercontent.com/Hilden202/HildenMedia/main/images/hilden_media_logo_meta.jpg" alt="HildenMedia logo"/>
+    <img height="180"
+         src="https://raw.githubusercontent.com/Hilden202/HildenMedia/main/images/hilden_media_logo_meta.jpg"
+         alt="Hilden Media – Teknik med själ" />
   </a>
-</div>
-<div align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=hilden202.hilden202&"  />
 </div>
 
 # Hilden Media 👻
