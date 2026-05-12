@@ -65,6 +65,16 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// === Dynamic footer year ===
+
+const currentYear = document.getElementById("currentYear");
+
+if (currentYear) {
+
+  currentYear.textContent = new Date().getFullYear();
+
+}
+
 // === About text toggle ===
 (function () {
   const text = document.getElementById('aboutText');
