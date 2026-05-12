@@ -69,10 +69,10 @@ body {
 .read-more {
   margin-top: 0;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, .25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: inherit;
-  padding: .5rem .9rem;
-  border-radius: .5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 
@@ -87,13 +87,13 @@ body {
 }
 
 .hero {
-  min-height: 50vh;   /* ↓ kortare hero-sektion, justera till 40–60vh efter smak */
+  min-height: 50vh; /* ↓ kortare hero-sektion, justera till 40–60vh efter smak */
   margin-top: 0 !important;
 
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 80px;  /* höj eller sänk px för loggans position */
+  padding-top: 80px; /* höj eller sänk px för loggans position */
 }
 
 .logo {
@@ -106,7 +106,6 @@ body {
   filter: drop-shadow(0 0 6px #d8c4a1);
   transition: filter 0.3s ease-in-out;
 } */
-
 
 .section-divider {
   background-color: #061227; /* Mörkblå ton */
@@ -134,7 +133,7 @@ body {
 
 .projects-section {
   background-color: #061227;
-  padding: 40px 20px 60px; 
+  padding: 40px 20px 60px;
   color: white;
   text-align: center;
 }
@@ -163,12 +162,15 @@ body {
   align-items: center;
   gap: 12px;
   box-shadow: 0 0 0 transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   min-height: 320px;
 }
 
-.project-card p { margin-bottom: 0; }
-
+.project-card p {
+  margin-bottom: 0;
+}
 
 .project-card:hover {
   transform: translateY(-6px);
@@ -182,7 +184,6 @@ body {
   margin-bottom: 10px;
 }
 
-
 .project-card h3 {
   margin: 0;
   font-size: 1.3em;
@@ -193,7 +194,6 @@ body {
   opacity: 0.85;
   text-align: center;
 }
-
 
 /* kontakt-sektion */
 
@@ -220,7 +220,6 @@ body {
 .contact-section textarea {
   min-height: 75px; /* t.ex. 140–180px beroende på vad du gillar */
 }
-
 
 .contact-section input,
 .contact-section textarea {
@@ -254,7 +253,6 @@ body {
   align-self: center;
 }
 
-
 .contact-section button:hover {
   background-color: #15305e;
 }
@@ -268,8 +266,8 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.85);
-  justify-content: center;  /* ligger kvar, men aktiveras först när .show */
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center; /* ligger kvar, men aktiveras först när .show */
   align-items: center;
 }
 
@@ -286,9 +284,8 @@ body {
   color: white;
   text-align: center;
   position: relative;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
 }
-
 
 .modal-content h2 {
   margin-bottom: 10px;
@@ -338,7 +335,12 @@ body {
   transform: scale(1.2);
   fill: #9bb3d3;
 }
-.modal-content img { display:block; max-width:100%; height:auto; border-radius:8px; }
+.modal-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
 .tarot-image {
   max-width: 100%;
@@ -357,115 +359,151 @@ body {
 }
 
 /* Modal: tarot hero-bild istället för <img> */
-.tarot-hero{
+.tarot-hero {
   position: relative;
-  height: 280px;               /* justera 240–320px efter smak */
+  height: 280px; /* justera 240–320px efter smak */
   border-radius: 10px;
   margin-bottom: 12px;
   background: center / cover no-repeat url("../images/tarot_teaser.png");
-  box-shadow: 0 8px 24px rgba(0,0,0,.35);
-  outline: 1px solid rgba(216,196,161,.35); /* subtil ram i “guldig” ton */
-}  
-.tarot-hero::after{
-  content:"";
-  position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(6,18,39,.12), rgba(6,18,39,.25));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  outline: 1px solid rgba(216, 196, 161, 0.35); /* subtil ram i “guldig” ton */
+}
+.tarot-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 18, 39, 0.12),
+    rgba(6, 18, 39, 0.25)
+  );
   border-radius: inherit;
 }
 
 /* Gör modalen lite bredare så layouten andas med hero-bild */
-.modal-content{
-  max-width: 560px;            /* tidigare 400px – passar hero bättre */
+.modal-content {
+  max-width: 560px; /* tidigare 400px – passar hero bättre */
 }
 
 /* Visa tarot-bakgrund endast på "Kommande"-modallen */
-#upcomingModal .modal-content::before{
-  content:"";
-  position:absolute; inset:0;
+#upcomingModal .modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: center / cover no-repeat url("../images/tarot_teaser.png");
-  opacity: .18;
+  opacity: 0.18;
   border-radius: 8px;
   pointer-events: none;
 }
 
- /* Säkerställ att tack-modalen inte får någon overlay-bakgrund */
- #thankYouModal .modal-content::before{
-   content: none;
- }
+/* Säkerställ att tack-modalen inte får någon overlay-bakgrund */
+#thankYouModal .modal-content::before {
+  content: none;
+}
 
 /* Valfritt: snyggare lista i modalen */
-.tarot-features{
+.tarot-features {
   text-align: left;
   max-width: 520px;
   margin: 0 auto;
 }
-.tarot-note{
+.tarot-note {
   margin-top: 12px;
-  opacity: .85;
+  opacity: 0.85;
 }
 
 .card-actions {
   display: flex;
   gap: 10px;
-  margin-top: auto;          /* tryck nedåt */
-  padding-top: 8px;          /* lite men inte för mycket luft ovanför knapparna */
+  margin-top: auto; /* tryck nedåt */
+  padding-top: 8px; /* lite men inte för mycket luft ovanför knapparna */
   flex-wrap: wrap;
   justify-content: center;
 }
 
-
 /* Normalisera höjd och räta upp ikoner/text */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  padding:8px 12px;
-  min-height:36px;         /* samma höjd */
-  line-height:1;           /* undvik radbas-skillnader */
-  border-radius:8px;
-  font-weight:800;
-  text-decoration:none;
-  background:#15305e;
-  border:1px solid #1f365a;
-  color:#fff;
-  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
-  white-space:nowrap;      /* hindra radbrytning som ”drar ut” höjden */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  min-height: 36px; /* samma höjd */
+  line-height: 1; /* undvik radbas-skillnader */
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  background: #15305e;
+  border: 1px solid #1f365a;
+  color: #fff;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+  white-space: nowrap; /* hindra radbrytning som ”drar ut” höjden */
 }
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 16px rgba(0,0,0,.35);
-  background:#1c3b72;
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  background: #1c3b72;
 }
-.btn-ghost{
-  background:transparent;
-  border:1px solid #1f365a;
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #1f365a;
 }
-.btn-ghost:hover{
-  background:#0b1e3f;
+.btn-ghost:hover {
+  background: #0b1e3f;
 }
 
 /* Ikonfix så att SVG inte påverkar radavståndet */
-.btn svg, .btn .gh{
-  width:18px;
-  height:18px;
-  display:block;
-  fill:#9bb3d3;
+.btn svg,
+.btn .gh {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: #9bb3d3;
 }
-.btn:hover .gh{ fill:#c9d7ee; }
+.btn:hover .gh {
+  fill: #c9d7ee;
+}
 
-.more-repos{ margin-top:20px; }
-.more-repos summary{ cursor:pointer; font-weight:600; }
-.more-repos ul{ list-style:none; padding-left:0; }
-.more-repos li{ margin:6px 0; opacity:.9; }
+.more-repos {
+  margin-top: 20px;
+}
+.more-repos summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.more-repos ul {
+  list-style: none;
+  padding-left: 0;
+}
+.more-repos li {
+  margin: 6px 0;
+  opacity: 0.9;
+}
 
 /* Läs mer-knapp under about-text */
-.read-more{
-  margin-top:.9rem; padding:.55rem 1rem;
-  border:1px solid rgba(255,255,255,.28);
-  border-radius:.6rem; background:transparent; color:inherit;
+.read-more {
+  margin-top: 0.9rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0.6rem;
+  background: transparent;
+  color: inherit;
 }
-.read-more:hover{ border-color:rgba(255,255,255,.45); transform:translateY(-1px); }
-.read-more:focus-visible{
-  outline:3px solid rgba(99,179,237,.6); outline-offset:3px;
+.read-more:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-1px);
+}
+.read-more:focus-visible {
+  outline: 3px solid rgba(99, 179, 237, 0.6);
+  outline-offset: 3px;
+}
+
+.tech-stack {
+  display: block;
+  margin-top: 0.6rem;
+  opacity: 0.75;
+  font-size: 0.85rem;
 }
