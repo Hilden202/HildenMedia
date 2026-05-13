@@ -3,7 +3,7 @@
   <a href="https://hildenmedia.se" target="_blank">
     <img
       height="220"
-      src="https://raw.githubusercontent.com/Hilden202/HildenMedia/main/images/hilden_media_logo_meta.jpg"
+      src="https://raw.githubusercontent.com/Hilden202/HildenMedia/main/images/hildenmedia-banner.png"
       alt="Hilden Media – Teknik med själ"
     />
   </a>
