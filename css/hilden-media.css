@@ -372,8 +372,8 @@ textarea:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: min(820px, calc(100vh - 20px));
-  padding: clamp(82px, 9vw, 142px) 0 clamp(72px, 9vw, 126px);
+  min-height: min(720px, calc(100vh - 80px));
+  padding: clamp(82px, 9vw, 142px) 0 clamp(40px, 6vw, 80px);
 }
 
 .hero::before {
