@@ -1,5 +1,5 @@
 <!-- HildenMedia Logo -->
-<div align="center">
+<div align="left">
   <a href="https://hildenmedia.se" target="_blank">
     <img
       height="220"
